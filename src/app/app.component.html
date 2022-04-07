@@ -1,0 +1,19 @@
+<select (change)="chang()">
+  <option *ngFor="let color of colors">
+      {{color }}
+  </option> 
+</select>
+<input type="button" [value]="login" (click)="toggle()">
+<div *ngIf="isAth; then welcome else error">
+
+</div>
+<ng-template #welcome >
+<p style="color: brown;">
+  welcome home
+</p>
+</ng-template>
+<ng-template #error >
+  <p style="color: blue;">
+  error
+  </p>
+  </ng-template>
